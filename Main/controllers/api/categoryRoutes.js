@@ -4,11 +4,11 @@ const { FundCategory, Fund } = require('../../models');
 router.get('/', async (req, res) => {
     try {
         const categoryData = await FundCategory.findAll({
-            attributes: ['name', 'description'],
+
             include: [
                 {
                     model: Fund,
-                    attributes: ['imageLink'],
+                    attributes: ['imageLink', 'description'],
                 },
             ],
         });
