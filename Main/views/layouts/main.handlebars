@@ -1,3 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund My Project!</title>
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body class="background-image">
+    <div class="container mt-5">
+        <header>
+            <nav>
+                <div class="d-flex justify-content-between p-2 bg-container ">
+                    <div>
+                        <i class="fas fa-search ml-3"></i>
+                        <button id="search" class="no-button ml-2">Search</button>
+                    </div>
+
+                    <a href="/fundraisers" class="mr-2 text-decoration-none text-dark">Fundraisers</a>
+                    <img src="/images/logo.png" class="mr-r text-decoration-none" alt="Logo" width="100"
+                        height="50"></img>
+                    <a href="/newFundraiser" class="mr-2 text-decoration-none text-dark">Start Fundraiser</a>
+
+
+                    <!-- Conditionally render login or logout links -->
+                    {{#if logged_in}}
+                    <a href="/profile">profile</a> |
+                    <button class="no-button" id="logout">logout</button>
+                    {{else}}
+                    <a href="/login" class="mr-2 text-decoration-none text-dark">Login</a>
+                    {{/if}}
+                </div>
+            </nav>
+
+        </header>
+        <main class="container container-fluid mt-5">
+            <!-- Render the sub layout -->
+            {{{ body }}}
+        </main>
+        <footer>
+
+        </footer>
+    </div>
+
+    <!-- Render script for logged in users only -->
+
+</body>
+
+</html>
