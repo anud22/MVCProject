@@ -1,11 +1,12 @@
 <section class="mt-5">
-  <header>{{title}}</header>
-  <a href="/api/fund/{{id}}">
-    <img src="/images/funds/{{imageLink}}" alt="{{description}}" width="85%" height="auto">
-  </a>
-  <p>Target $ {{targetVal}}</p>
-  <p>Current contributions ${{contribution.totalMoney}}</p>
-  <p>{{description}}</p>
-  <p> Last contribution was {{timeElapsed updatedAt}} ago</p>
 
+  <div class="d-flex justify-content-center align-items-center flex-column">
+    <header>{{title}}</header>
+    <img src="/images/funds/{{imageLink}}" alt="{{description}}" width="85%" height="auto">
+    <button id="contribute" data-attr={{id}} class="btn btn-sm btn-primary mt-2 w-50"> Contribute </button>
+    <p>Target $ {{targetVal}}</p>
+    <p>Current contributions ${{contribution.totalMoney}}</p>
+    <p>{{description}}</p>
+    <p> Last contribution was {{timeElapsed updatedAt}} ago</p>
+  </div>
 </section>
