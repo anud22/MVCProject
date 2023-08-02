@@ -5,5 +5,7 @@ const homeRoutes = require('./homeRoutes');
 
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
+router.use('/fund', fundRoutes);
+router.use('/category', categoryRoutes);
 
 module.exports = router;
