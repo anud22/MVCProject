@@ -1,45 +1,30 @@
 const { Model, DataTypes, NOW } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Fund extends Model {
+class FundCategory extends Model {
 
 }
-Fund.init({
+FundCategory.init({
     id: {
         type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
-    title: {
+    name: {
         type: DataTypes.STRING,
         allowNull: false,
     },
     description: {
         type: DataTypes.STRING,
-    },
-    targetVal: {
-        type: DataTypes.INTEGER,
-        allowNull: false
-    },
-    imageLink: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    categoryId: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'fundCategory',
-            key: 'id',
-        },
     }
 },
     {
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
         underscored: false,
-        modelName: 'fund',
+        modelName: 'fundCategory',
     }
 )
-module.exports = Fund;
+module.exports = FundCategory;
