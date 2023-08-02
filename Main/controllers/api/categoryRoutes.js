@@ -29,7 +29,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const fundData = await Fund.findAll({
-            where: { category_id: req.params.id },
+            where: { categoryId: req.params.id },
             include: [
                 {
                     model: Contribution

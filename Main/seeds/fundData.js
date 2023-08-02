@@ -5,39 +5,36 @@ const fundData = [
     title: 'Blossoming Apricot',
     description: 'LedyX',
     targetVal: 2600,
-    category_id: 1,
-    imageLink: '01-blossoming-apricot.jpg',
-    user_id: 1
+    categoryId: 1,
+    imageLink: '01-blossoming-apricot.jpg'
   },
   {
     title: 'Cosmos Flowers',
     description: 'WStudio',
     targetVal: 3000,
-    category_id: 2,
-    imageLink: '02-cosmos-flowers.jpg',
-    user_id: 2
+    categoryId: 2,
+    imageLink: '02-cosmos-flowers.jpg'
   },
   {
     title: 'Sand + Sea = Summer',
     description: 'S_Photo',
     targetVal: 4000,
-    category_id: 3,
-    imageLink: '03-sand-sea-summer.jpg',
-    user_id: 3,
+    categoryId: 3,
+    imageLink: '03-sand-sea-summer.jpg'
   },
   {
     title: 'Beach Chairs',
+    description: 'cHAIRS_Photo',
     targetVal: 3000,
-    category_id: 2,
-    imageLink: '04-beach-chairs.jpg',
-    user_id: 4,
+    categoryId: 2,
+    imageLink: '04-beach-chairs.jpg'
   },
   {
     title: 'Beach Sunrise',
+    description: 'SUNRISE_Photo',
     targetVal: 2000,
-    category_id: 22,
-    imageLink: '05-beach-sunrise.jpg',
-    user_id: 3,
+    categoryId: 2,
+    imageLink: '05-beach-sunrise.jpg'
   }
 ];
 

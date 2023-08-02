@@ -26,26 +26,19 @@ Fund.init({
         type: DataTypes.STRING,
         allowNull: false
     },
-    createdBy: {
+    categoryId: {
         type: DataTypes.INTEGER,
-        /*  references: {
-              model: 'user',
-              key: 'id',
-          },*/
-    },
-    categoryId:{
-        type: DataTypes.INTEGER,
-        /*  references: {
-              model: 'fundCategory',
-              key: 'id',
-          },*/
+        references: {
+            model: 'fundCategory',
+            key: 'id',
+        },
     }
 },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
-        underscored: true,
+        underscored: false,
         modelName: 'fund',
     }
 )

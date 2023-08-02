@@ -1,12 +1,14 @@
 const sequelize = require('../config/connection');
 const seedFund = require('./fundData');
 const seedFundCategories = require('./fundCategory');
+const seedContributions = require('./contribution');
 
 const seedAll = async () => {
     await sequelize.sync({ force: true });
 
-    await seedFund();
     await seedFundCategories();
+    await seedFund();
+    await seedContributions();
 
     process.exit(0);
 };

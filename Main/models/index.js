@@ -3,11 +3,11 @@ const FundCategory = require('./FundCategory');
 const Contribution = require('./Contribution');
 
 FundCategory.hasMany(Fund, {
-  foreignKey: 'category_id',
+  foreignKey: 'categoryId',
 });
 
 Fund.belongsTo(FundCategory, {
-  foreignKey: 'category_id',
+  foreignKey: 'categoryId',
   onDelete: 'CASCADE',
 });
 
