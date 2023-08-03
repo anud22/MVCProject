@@ -14,9 +14,15 @@ Fund.init({
     title: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+            len: [50],
+          },
     },
     description: {
         type: DataTypes.STRING,
+        validate: {
+            len: [300],
+          },
     },
     targetVal: {
         type: DataTypes.INTEGER,

@@ -1,14 +1,39 @@
-  <section class="mt-5">
+<section class="mt-5">
 
-    <div class="d-flex justify-content-center align-items-center flex-column">
-      <header>{{title}}</header>
-      <img src="/images/funds/{{imageLink}}" alt="{{description}}" width="85%" height="auto">
-      <button class="contribute-button" data-attr={{id}} class="btn btn-sm btn-primary mt-2 w-50" > Contribute </button>
-      <p>Target $ {{targetVal}}</p>
-      <p>Current contributions ${{contribution.totalMoney}}</p>
-      <p>{{description}}</p>
-      <p> Last contribution was {{timeElapsed updatedAt}} ago</p>
+  <div class="d-flex justify-content-center align-items-center flex-column">
+    <header>{{title}}</header>
+    <img src="/images/funds/{{imageLink}}" alt="{{description}}" width="50%" height="50%">
+    <button class="contribute-button" data-attr={{id}} class="btn btn-sm btn-primary mt-2 w-50" data-bs-toggle="modal"
+      data-bs-target="#myModal"> Contribute </button>
+    <p>Target $ {{targetVal}}</p>
+    <p>Current contributions ${{contribution.donationAmount}}</p>
+    <p>{{description}}</p>
+    <p> Last contribution was made {{timeElapsed contribution.updatedAt}} ago</p>
+  </div>
+</section>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 text-shadow">Thanks for the contribution !</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3 d-flex flex-column justify-content-center text-center align-items-center">
+            <label for="dollar" class="col-form-label fs-5">Donation amount</label>
+            <input type="text" class="form-control border border-secondary rounded-pill shadow w-50" id="money">
+            <button id="pledge-button" class="btn btn-info mt-2">Pledge</button>
+          </div>
+      </div>
+      </form>
     </div>
-  </section>
 
- 
+  </div>
+</div>
