@@ -1,34 +1,6 @@
 <!-- Hero Section -->
 <div class="text-center text-dark py-5">
-    <p class="hero-content">Your home</p>
-    <p class="hero-content">for help</p>
-    <a href="/newFundraiser" class="btn bg-white mr-2 bg-container">Start Fundraiser</a>
+  <p class="hero-content">Your home</p>
+  <p class="hero-content">for help</p>
+  <a href="/newFundraiser" class="btn bg-white mr-2 bg-container">Start Fundraiser</a>
 </div>
-<!DOCTYPE html>
-<html lang="en">
-
-
-<body>
-  <h2>Select a File to Upload</h2>
-  <input type="file" id="fileInput" />
-  <button onclick="uploadFile()">Upload</button>
-
-  <script>
-    function uploadFile() {
-      const fileInput = document.getElementById('fileInput');
-      const selectedFile = 
-      .files[0]; // Get the first selected file (can handle multiple files if 'multiple' attribute is used)
-
-      if (!selectedFile) {
-        alert('Please select a file to upload.');
-        return;
-      }
-
-      // You can now use 'selectedFile' to upload the file to the server or perform any other operations.
-
-      console.log('Selected File:', selectedFile);
-    }
-  </script>
-</body>
-
-

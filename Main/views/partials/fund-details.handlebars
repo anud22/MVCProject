@@ -8,7 +8,9 @@
     <p>Target $ {{targetVal}}</p>
     <p>Current contributions ${{contribution.donationAmount}}</p>
     <p>{{description}}</p>
-    <p> Last contribution was made {{timeElapsed contribution.updatedAt}} ago</p>
+    <p> {{#if contribution.updatedAt}}
+      Last contribution was made {{timeElapsed contribution.updatedAt}} ago</p>
+    {{/if}}
   </div>
 </section>
 
