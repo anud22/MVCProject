@@ -2,6 +2,7 @@ let fundId;
 let fundsContainer = $('.funds');
 let pledgeBtn = $('#pledge-button');
 let moneyInput = $('#money');
+let createFundForm = $('#createFund');
 
 const openContribution = function (event) {
   // Get the 'data-attr' value of the clicked button
@@ -9,6 +10,20 @@ const openContribution = function (event) {
   fundId = dataAttrValue;
 };
 
+const submitFund = function (event) {
+  event.preventDefault();
+
+  const title = createFundForm.find('input[name="title"]').val().trim();
+  const categoryId = createFundForm.find('select[name="categoryId"]').val();
+  const description = createFundForm.find('textarea[name="description"]').val().trim();
+  const targetVal = createFundForm.find('input[name="targetVal"]').val().trim();
+
+  if (title === '' || categoryId === 'Select fund category' || description === '' || targetVal === '') {
+    alert('Please fill in all the required fields.');
+    return;
+  }
+  createFundForm.submit();
+}
 const addDonation = async (event) => {
   const donationAmount = moneyInput.val().trim();
   const regex = /^[0-9.]+$/;
@@ -37,3 +52,4 @@ const addDonation = async (event) => {
 
 fundsContainer.on('click', '.contribute-button', openContribution);
 pledgeBtn.on('click', addDonation);
+createFundForm.on('submit', submitFund);
