@@ -15,13 +15,13 @@ Fund.init({
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [50],
+            len: [1, 50],
           },
     },
     description: {
         type: DataTypes.STRING,
         validate: {
-            len: [300],
+            len: [1, 300],
           },
     },
     targetVal: {
