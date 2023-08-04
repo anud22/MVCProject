@@ -1,18 +1,23 @@
-<section class="mt-5">
-
-  <div class="d-flex justify-content-center align-items-center flex-column">
-    <header>{{title}}</header>
-    <img src="/images/funds/{{imageLink}}" alt="{{description}}" width="50%" height="50%">
-    <button class="contribute-button" data-attr={{id}} class="btn btn-sm btn-primary mt-2 w-50" data-bs-toggle="modal"
+<div class="col">
+  <div class="card mx-5 mt-5">
+    <img src="/images/funds/{{imageLink}}" alt="{{description}}" width="85%" height="auto" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">{{description}}</p>
+      <p>Current contributions ${{contribution.totalMoney}}</p>
+      <p>Target $ {{targetVal}}</p>
+      <button class="contribute-button" data-attr={{id}} class="btn btn-sm btn-primary mt-2 w-50" data-bs-toggle="modal"
       data-bs-target="#myModal"> Contribute </button>
-    <p>Target $ {{targetVal}}</p>
-    <p>Current contributions ${{contribution.donationAmount}}</p>
-    <p>{{description}}</p>
-    <p> {{#if contribution.updatedAt}}
+      <!-- <a href="#" class="btn btn-primary contribute-button" data-attr={{id}}>Contribute</a> -->
+    </div>
+    <div class="card-footer">
+      <!-- <small class="text-muted">Last contribution was {{timeElapsed updatedAt}} ago</small> -->
+      <p> {{#if contribution.updatedAt}}
       Last contribution was made {{timeElapsed contribution.updatedAt}} ago</p>
-    {{/if}}
+      {{/if}}
+    </div>
   </div>
-</section>
+</div>
 
 <!-- The Modal -->
 <div class="modal fade" id="myModal">
@@ -36,6 +41,5 @@
       </div>
       </form>
     </div>
-
   </div>
 </div>

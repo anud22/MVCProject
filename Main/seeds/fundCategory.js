@@ -9,10 +9,6 @@ const fundCategories = [
         name: 'Emergency',
         description: 'We offer help for natural disaster victims'
     },
-    {
-        name: 'Cancer Institute',
-        description: 'We contribute for cancer patients treatments'
-    },
 ]
 const seedFundCategories = () => FundCategory.bulkCreate(fundCategories);
 
