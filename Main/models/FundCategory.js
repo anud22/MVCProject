@@ -17,6 +17,10 @@ FundCategory.init({
     },
     description: {
         type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+            len: [1, 8],
+        },
     }
 },
     {
