@@ -1,7 +1,5 @@
 const router = require('express').Router();
-const fundRoutes = require('./fundRoutes');
-const categoryRoutes = require('./categoryRoutes');
-router.use('/fund', fundRoutes);
-router.use('/category', categoryRoutes);
+const contributionRoutes = require('./contributionRoutes');
+router.use('/contribution', contributionRoutes);
 module.exports = router;
 
