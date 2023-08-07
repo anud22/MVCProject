@@ -10,20 +10,36 @@ const openContribution = function (event) {
   fundId = dataAttrValue;
 };
 
-const submitFund = function (event) {
+const submitFund = async function (event) {
   event.preventDefault();
 
   const title = createFundForm.find('input[name="title"]').val().trim();
   const categoryId = createFundForm.find('select[name="categoryId"]').val();
   const description = createFundForm.find('textarea[name="description"]').val().trim();
   const targetVal = createFundForm.find('input[name="targetVal"]').val().trim();
-
   if (title === '' || categoryId === 'Select fund category' || description === '' || targetVal === '') {
     alert('Please fill in all the required fields.');
     return;
   }
-  createFundForm.submit();
+  const formData = new FormData(createFundForm[0]);
+  try {
+    const response = await fetch('/fund', {
+      method: 'POST',
+      body: formData
+    });
+    if (response.ok) {
+      // Successful form submission
+      console.log('Form successfully submitted');
+      
+      // Redirect to the homepage
+      window.location.href = '/';
+    }
+  } catch (error) {
+    console.error('An error occurred:', error);
+    throw new error(error);
+  }
 }
+
 const addDonation = async (event) => {
   const donationAmount = moneyInput.val().trim();
   const regex = /^[0-9.]+$/;
