@@ -3,11 +3,11 @@ const { FundCategory } = require('../models');
 const fundCategories = [
     {
         name: 'Education',
-        description: 'We offer scholarships for colleges'
+        description: 'View Education based fundraisers!'
     },
     {
         name: 'Emergency',
-        description: 'We offer help for natural disaster victims'
+        description: 'View Emergency based fundraisers!'
     },
 ]
 const seedFundCategories = () => FundCategory.bulkCreate(fundCategories);
