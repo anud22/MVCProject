@@ -29,7 +29,13 @@
 
 .hero-content {
     /* Apply the imported font to the .display-4 class */
-    font-family: 'Comic Neue', cursive;
+    font-family: 'Helvetica', cursive;
     font-size: 36px;
     /* Set the desired font size */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
 }

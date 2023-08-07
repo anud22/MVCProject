@@ -34,20 +34,18 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/newFundraiser">Start a Fundraiser</a>
                         </li>
+                    {{#if logged_in}}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Log Out</a>
+                            <button class="nav-link" id="logout">logout</button>
                         </li>
+                    {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">login</a>
+                        </li>
+                    {{/if}}
                     </ul>
                 </div>
             </nav>
-            <!--
-                    {{#if logged_in}}
-                    <a href="/profile">profile</a> |
-                    <button class="no-button" id="logout">logout</button>
-                    {{else}}
-                    <a href="/login" class="mr-2 text-decoration-none text-dark">Login</a>
-                    {{/if}}
-            -->
         </header>
         <main class="container container-fluid mt-5">
             <!-- Render the sub layout -->
@@ -62,6 +60,7 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/fund.js"></script>
+    <script src="/js/logout.js"></script>
 </body>
 
 </html>
