@@ -13,15 +13,10 @@ FundCategory.init({
     },
     name: {
         type: DataTypes.STRING,
-        unique: true,
         allowNull: false,
     },
     description: {
         type: DataTypes.STRING,
-        allowNull: false,
-        validate: {
-            len: [1, 8],
-        },
     }
 },
     {

@@ -19,14 +19,14 @@ Contribution.init({
             key: 'id',
         },
     },
-    donationAmount: {
-        type: DataTypes.DECIMAL(10, 2),
+    totalMoney: {
+        type: DataTypes.DECIMAL,
         allowNull: false
     }
 },
     {
         sequelize,
-        timestamps: true,
+        timestamps: false,
         freezeTableName: true,
         underscored: false,
         modelName: 'contribution',

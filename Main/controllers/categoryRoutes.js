@@ -1,24 +1,6 @@
 const router = require('express').Router();
 const { FundCategory, Fund, Contribution } = require('../models');
 
-router.get('/seed', async (req, res) => {
-
-    const fundCategories = [
-        {
-            name: 'Education',
-            description: 'We offer scholarships for colleges'
-        },
-        {
-            name: 'Emergency',
-            description: 'We offer help for natural disaster victims'
-        },
-    ]
-    await FundCategory.bulkCreate(fundCategories);
-    res.status(200).send("ok");
-    
-
-})
-
 router.get('/', async (req, res) => {
     try {
         const categoryData = await FundCategory.findAll({
@@ -65,6 +47,4 @@ router.get('/:id', async (req, res) => {
         res.status(500).json({ message: 'An error occurred', error: err.message });
     }
 });
-
-
 module.exports = router;

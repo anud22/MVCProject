@@ -19,7 +19,7 @@ const fundData = [
     title: 'Sand + Sea = Summer',
     description: 'S_Photo',
     targetVal: 4000,
-    categoryId: 1,
+    categoryId: 3,
     imageLink: '03-sand-sea-summer.jpg'
   },
   {
