@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
         console.dir(categories, { depth: null });
         res.render('newFundraiser', {
             categories,
-            logged_in:req.session.logged_in,
+            logged_in: req.session.logged_in
         })
     } catch (err) {
         res.status(500).json({ message: 'An error occurred', error: err.message });

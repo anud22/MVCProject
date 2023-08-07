@@ -59,7 +59,6 @@ router.get('/:id', async (req, res) => {
         // Send over the 'loggedIn' session variable to the 'fund' template
         res.render('fund', {
             funds,
-            logged_in:req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json({ message: 'An error occurred', error: err.message });

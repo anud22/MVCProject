@@ -1,3 +1,4 @@
+ {{#if logged_in}}
 <form id="createFund" action="/fund" method="post" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="title" class="form-label">Give your fundraiser a title!</label>
@@ -27,3 +28,6 @@
         <button type="submit" class="btn btn-primary mt-3">Create your fundraiser!</button>
     </div>
 </form>
+{{else}}
+<a href="/login">You must login first to view this page</a>
+{{/if}}
