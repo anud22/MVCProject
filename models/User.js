@@ -25,20 +25,21 @@ User.init(
         },
       },
       lastName: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       firstName: {
-        type: DataTypes.STRING
+        type: DataTypes.STRING,
+        allowNull: false,
       },
       password: {
         // Check
         type: DataTypes.STRING,
+        allowNull: false,
         validate: {
-            len: { 
               // Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:
-               is:["^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"],
-               msg: "The password length should have minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character."
-              }
+            is:/(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}/,
+            // msg: "The password length should have minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character."
          }
       },
     },
