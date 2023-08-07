@@ -37,7 +37,8 @@ router.get('/', async (req, res) => {
         // Send over the 'loggedIn' session variable to the 'category' template
         res.render('category', {
             categories,
-            loggedIn: true,
+            // logged_In: true,
+            logged_in:req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json({ message: 'An error occurred', error: err.message });
@@ -59,7 +60,7 @@ router.get('/:id', async (req, res) => {
         // Send over the 'loggedIn' session variable to the 'fund' template
         res.render('fund', {
             funds,
-            loggedIn: true,
+            logged_in:req.session.logged_in,
         });
     } catch (err) {
         res.status(500).json({ message: 'An error occurred', error: err.message });
