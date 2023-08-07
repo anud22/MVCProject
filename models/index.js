@@ -1,3 +1,4 @@
+const User = require('./User');
 const Fund = require('./Fund');
 const FundCategory = require('./FundCategory');
 const Contribution = require('./Contribution');
@@ -27,4 +28,4 @@ Contribution.belongsTo(Fund, {
   foreignKey: 'fundId',
 });
 
-module.exports = { Fund, FundCategory, Contribution };
+module.exports = { Fund, FundCategory, Contribution, User };
