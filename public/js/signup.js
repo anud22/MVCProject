@@ -16,8 +16,10 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/');
       } else {
-        alert('Failed to sign up.');
+        alert('Failed to sign up. Please check with password validation.');
       }
+    }else{
+      alert('Please enter all fields to sign up.');
     }
   };
 
