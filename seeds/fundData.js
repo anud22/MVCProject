@@ -2,39 +2,39 @@ const { Fund } = require('../models');
 
 const fundData = [
   {
-    title: 'Blossoming Apricot',
-    description: 'LedyX',
+    title: 'In dire need of helping pay off my college books!',
+    description: 'Please share wherever you can I would greatly appreciate it!',
     targetVal: 2600,
     categoryId: 1,
-    imageLink: '01-blossoming-apricot.jpg'
+    imageLink: 'collegebooks.jpg'
   },
   {
-    title: 'Cosmos Flowers',
-    description: 'WStudio',
+    title: 'Emergency wrist tendon surgery!',
+    description: 'Help! I have apparently been coding way too often and now I need wrist surgery :(',
     targetVal: 3000,
     categoryId: 2,
-    imageLink: '02-cosmos-flowers.jpg'
+    imageLink: 'wrist.jpg'
   },
   {
-    title: 'Sand + Sea = Summer',
-    description: 'S_Photo',
+    title: 'Student Laptop Crowdfund',
+    description: 'Hey everyone! My laptop recently broke and I am in need of some assistance for the repairs.',
     targetVal: 4000,
     categoryId: 1,
-    imageLink: '03-sand-sea-summer.jpg'
+    imageLink: 'brokenlaptop.jpg'
   },
   {
-    title: 'Beach Chairs',
-    description: 'cHAIRS_Photo',
+    title: 'Spine realignment',
+    description: 'Pretty self explanatory, could you please share? I look like the image above.',
     targetVal: 3000,
     categoryId: 2,
-    imageLink: '04-beach-chairs.jpg'
+    imageLink: 'spine.jpg'
   },
   {
-    title: 'Beach Sunrise',
-    description: 'SUNRISE_Photo',
+    title: 'Emergency funds for Falkor',
+    description: 'Falkor, my puppy has recently gotten very ill and I need help paying for the vet!',
     targetVal: 2000,
     categoryId: 2,
-    imageLink: '05-beach-sunrise.jpg'
+    imageLink: 'falkor.png'
   }
 ];
 
